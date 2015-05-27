@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBERP1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CUSTOMER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="CREATEDATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ORDERD">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="OMID" />
+    </Key>
+    <Property Name="ID" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="OMID" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="PID" Type="nvarchar" MaxLength="20" />
+    <Property Name="PNAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="OPRICE" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="ONUM" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="OMONEY" Type="money" />
+    <Property Name="CREATEDATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ORDERM">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="CID" Type="nvarchar" MaxLength="10" />
+    <Property Name="CREATEDATE" Type="datetime" />
+  </EntityType>
+  <EntityContainer Name="DBERP1ModelStoreContainer">
+    <EntitySet Name="CUSTOMER" EntityType="Self.CUSTOMER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ORDERD" EntityType="Self.ORDERD" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ORDERM" EntityType="Self.ORDERM" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

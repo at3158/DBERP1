@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBERP1ModelStoreContainer" CdmEntityContainer="DBERP1Entities">
+    <EntitySetMapping Name="CUSTOMER">
+      <EntityTypeMapping TypeName="DBERP1Model.CUSTOMER">
+        <MappingFragment StoreEntitySet="CUSTOMER">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="CREATEDATE" ColumnName="CREATEDATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ORDERD">
+      <EntityTypeMapping TypeName="DBERP1Model.ORDERD">
+        <MappingFragment StoreEntitySet="ORDERD">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="OMID" ColumnName="OMID" />
+          <ScalarProperty Name="PID" ColumnName="PID" />
+          <ScalarProperty Name="PNAME" ColumnName="PNAME" />
+          <ScalarProperty Name="OPRICE" ColumnName="OPRICE" />
+          <ScalarProperty Name="ONUM" ColumnName="ONUM" />
+          <ScalarProperty Name="OMONEY" ColumnName="OMONEY" />
+          <ScalarProperty Name="CREATEDATE" ColumnName="CREATEDATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ORDERM">
+      <EntityTypeMapping TypeName="DBERP1Model.ORDERM">
+        <MappingFragment StoreEntitySet="ORDERM">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CID" ColumnName="CID" />
+          <ScalarProperty Name="CREATEDATE" ColumnName="CREATEDATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
